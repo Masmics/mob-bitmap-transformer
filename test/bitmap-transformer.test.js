@@ -2,10 +2,11 @@ const { readFileSync } = require('fs');
 const BitmapTransform = require('../lib/bitmap-transformer');
 const invert = require('../lib/invert-transformer');
 // TODO remove .skip and finish this file/test
-describe.skip('bitmap file transformer', () => {
+describe('bitmap file transformer', () => {
 
   let buffer = null;
   beforeEach(() => {
+    buffer = readFileSync('./test/test-bitmap.bmp');
     // TODO: file read sync './test/test-bitmap.bmp' into buffer variable
   });
 
